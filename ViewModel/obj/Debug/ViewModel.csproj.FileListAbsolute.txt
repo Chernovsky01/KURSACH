@@ -1,0 +1,9 @@
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\bin\Debug\ViewModel.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\bin\Debug\ViewModel.pdb
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\bin\Debug\Models.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\bin\Debug\Models.pdb
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\obj\Debug\ViewModel.csproj.AssemblyReference.cache
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\obj\Debug\ViewModel.csproj.CopyComplete
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\obj\Debug\ViewModel.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\ViewModel\obj\Debug\ViewModel.pdb
