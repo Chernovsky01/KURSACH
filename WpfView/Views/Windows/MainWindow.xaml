@@ -3,17 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="clr-namespace:ViewModels;assembly=ViewModel"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="KURSACH"
+        Title="{Binding WindowTitle}"
         Height="600" MinHeight="600"
         Width="800" MinWidth="800">
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        
+        <StackPanel Grid.Column="0">
+            <Button MinHeight="50" Content="Test"/>
+            <Button MinHeight="50" Content="Test"/>
+            <Button MinHeight="50" Content="Test"/>
+        </StackPanel>
+
+        <WrapPanel Grid.Column="1"
+                   Orientation="Horizontal">
+            <Button MinHeight="100"
+                    MinWidth="150"
+                    Content="Test"/>
+            <Button MinHeight="100"
+                    MinWidth="150"
+                    Content="Test"/>
+            <Button MinHeight="100"
+                    MinWidth="150"
+                    Content="Test"/>
+            <Button MinHeight="100"
+                    MinWidth="150"
+                    Content="Test"/>
+            <Button MinHeight="100"
+                    MinWidth="150"
+                    Content="Test"/>
+        </WrapPanel>
     </Grid>
 </Window>

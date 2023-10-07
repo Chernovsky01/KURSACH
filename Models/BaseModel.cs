@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ViewModels
+namespace Models
 {
     /// <summary>
-    /// Базовый класс ViewModel'ли, от которого должны наследоваться остальные ViewModel'ли.
+    /// Базовый класс Модели, от которого могут наследоваться остальные модели.
     /// </summary>
-    public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public abstract class BaseModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// Виртуальный метод для вызова события PropertyChanged у поля ViewModel'ли.
+        /// Виртуальный метод для вызова события PropertyChanged у поля модели.
         /// </summary>
         /// <param name="propertyName"></param>
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -37,22 +41,6 @@ namespace ViewModels
             OnPropertyChanged(propertyName);
 
             return true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-        }
-
-        private bool _disposed;
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposing || _disposed)
-                return;
-
-            _disposed = true;
-
-            // Освобождение управляемых ресурсов
         }
     }
 }
