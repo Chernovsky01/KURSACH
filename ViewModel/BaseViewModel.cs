@@ -1,12 +1,13 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace ViewModel
+namespace ViewModels
 {
     /// <summary>
     /// Базовый класс ViewModel'ли, от которого должны наследоваться остальные ViewModel'ли.
     /// </summary>
-    internal abstract class BaseViewModel : INotifyPropertyChanged
+    internal abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -36,6 +37,22 @@ namespace ViewModel
             OnPropertyChanged(propertyName);
 
             return true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        private bool _disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposing || _disposed)
+                return;
+
+            _disposed = true;
+
+            // Освобождение управляемых ресурсов
         }
     }
 }
