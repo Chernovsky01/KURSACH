@@ -7,7 +7,7 @@ namespace ViewModels
     /// <summary>
     /// Базовый класс ViewModel'ли, от которого должны наследоваться остальные ViewModel'ли.
     /// </summary>
-    internal abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

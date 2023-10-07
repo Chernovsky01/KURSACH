@@ -7,19 +7,40 @@ namespace Models
     /// </summary>
     public class Card
     {
+        #region Title of card
         /// <summary>
         /// Поле, которое содержит заголовок задачи.
         /// </summary>
-        public string Title { get; set; }
+        private string _title;
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+        #endregion
 
+        #region Task Description of card
         /// <summary>
         /// Поле, которое содержит описание задачи.
         /// </summary>
-        public string TaskDescription { get; set; }
+        private string _taskDescription;
+        public string TaskDescription
+        {
+            get { return _taskDescription; }
+            set { _taskDescription = value; }
+        }
+        #endregion
 
+        #region Deadline of card
         /// <summary>
         /// Поле, которое содержит дедлайн задачи.
         /// </summary>
-        public DateTime Deadline { get; set; }
+        private DateTime _deadline;
+        public DateTime Deadline
+        {
+            get { return _deadline; }
+            set { _deadline = value; }
+        }
+        #endregion
     }
 }

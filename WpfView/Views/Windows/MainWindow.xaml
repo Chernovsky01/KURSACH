@@ -14,21 +14,6 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="1"
-                    Orientation="Horizontal"
-                    FlowDirection="RightToLeft">
-            
-        </StackPanel>
-
-        <StackPanel Grid.Column="0">
-            <Button MinHeight="40"
-                    Margin="10 10"/>
-
-            <Button MinHeight="40"
-                    Margin="10 10"/>
-
-            <Button MinHeight="40"
-                    Margin="10 10"/>
-        </StackPanel>
+        
     </Grid>
 </Window>

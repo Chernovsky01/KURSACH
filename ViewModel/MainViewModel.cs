@@ -1,6 +1,6 @@
 ﻿namespace ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : BaseViewModel
     {
 
     }
