@@ -19,9 +19,9 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
-            <Button MinHeight="50" Content="Test"/>
-            <Button MinHeight="50" Content="Test"/>
-            <Button MinHeight="50" Content="Test"/>
+            <Button MinHeight="50"
+                    Content="Example"
+                    Command="{Binding Path=ExampleCommand}"/>
         </StackPanel>
 
         <WrapPanel Grid.Column="1"
