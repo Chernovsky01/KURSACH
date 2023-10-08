@@ -6,7 +6,7 @@
         xmlns:viewmodel="clr-namespace:ViewModels;assembly=ViewModel"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="{Binding Path=WindowTitle}"
+        Title="KURSACH"
         Height="600" MinHeight="600"
         Width="800" MinWidth="800">
     <Window.DataContext>
@@ -20,27 +20,15 @@
 
         <StackPanel Grid.Column="0">
             <Button MinHeight="50"
-                    Content="Example"
-                    Command="{Binding Path=ExampleCommand}"/>
+                    Content="Example"/>
         </StackPanel>
 
-        <WrapPanel Grid.Column="1"
-                   Orientation="Horizontal">
-            <Button MinHeight="100"
-                    MinWidth="150"
-                    Content="Test"/>
-            <Button MinHeight="100"
-                    MinWidth="150"
-                    Content="Test"/>
-            <Button MinHeight="100"
-                    MinWidth="150"
-                    Content="Test"/>
-            <Button MinHeight="100"
-                    MinWidth="150"
-                    Content="Test"/>
-            <Button MinHeight="100"
-                    MinWidth="150"
-                    Content="Test"/>
-        </WrapPanel>
+        <ListView Grid.Column="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ListBox Height="100"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

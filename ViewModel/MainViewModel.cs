@@ -1,21 +1,16 @@
-﻿using System.Windows.Input;
+﻿using Models;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 using ViewModel.Commands;
-using System.Windows;
 
 namespace ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        #region WindowTitle
-
-        private string _windowTitle = "KURSACH";
-		public string WindowTitle
-		{
-			get => _windowTitle;
-			set => Set(ref _windowTitle, value);
-		}
-
-        #endregion
+        /// <summary>
+        /// Список категорий
+        /// </summary>
+        ObservableCollection<Category> Categories = new ObservableCollection<Category>();
 
         #region Example command
 
@@ -25,7 +20,7 @@ namespace ViewModels
 
         private void OnExampleCommand(object parametr)
         {
-
+            
         }
 
         #endregion
