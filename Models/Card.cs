@@ -9,10 +9,10 @@ namespace Models
     {
         #region Title of card
 
+        private string _title;
         /// <summary>
         /// Поле, которое содержит заголовок задачи.
         /// </summary>
-        private string _title;
         public string Title
         {
             get => _title;
@@ -23,10 +23,10 @@ namespace Models
 
         #region Task Description of card
 
+        private string _taskDescription;
         /// <summary>
         /// Поле, которое содержит описание задачи.
         /// </summary>
-        private string _taskDescription;
         public string TaskDescription
         {
             get => _taskDescription;
@@ -37,14 +37,15 @@ namespace Models
 
         #region Deadline of card
 
+        private DateTime _deadline;
         /// <summary>
         /// Поле, которое содержит дедлайн задачи.
         /// </summary>
-        private DateTime _deadline;
         public DateTime Deadline
         {
             get => _deadline;
-            set => Set(ref _deadline, value);        }
+            set => Set(ref _deadline, value);
+        }
 
         #endregion
     }
