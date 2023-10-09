@@ -7,9 +7,13 @@ namespace Models
     /// </summary>
     public class Card : BaseModel
     {
-        #region Title of card
+        #region Card Title
 
+        /// <summary>
+        /// Поле, которое содержит заголовок задачи.
+        /// </summary>
         private string _title;
+
         /// <summary>
         /// Поле, которое содержит заголовок задачи.
         /// </summary>
@@ -21,9 +25,13 @@ namespace Models
 
         #endregion
 
-        #region Task Description of card
+        #region Card Description
 
+        /// <summary>
+        /// Поле, которое содержит заголовок задачи.
+        /// </summary>
         private string _taskDescription;
+
         /// <summary>
         /// Поле, которое содержит описание задачи.
         /// </summary>
@@ -35,9 +43,13 @@ namespace Models
 
         #endregion
 
-        #region Deadline of card
+        #region Card Deadline
 
+        /// <summary>
+        /// Поле, которое содержит дедлайн задачи.
+        /// </summary>
         private DateTime _deadline;
+
         /// <summary>
         /// Поле, которое содержит дедлайн задачи.
         /// </summary>

@@ -1,0 +1,6 @@
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\bin\Debug\Models.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\bin\Debug\Models.pdb
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\obj\Debug\Model.csproj.AssemblyReference.cache
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\obj\Debug\Models.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\Models\obj\Debug\Models.pdb

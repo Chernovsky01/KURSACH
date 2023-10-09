@@ -15,16 +15,29 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
             <Button MinHeight="50"
-                    Content="Example"/>
+                    Content="Добавить катугорию"/>
+            <Button MinHeight="50"
+                    Content="Удалить категорию"/>
         </StackPanel>
 
-        <ListView Grid.Column="1">
-            
-        </ListView>
+        <ListView Grid.Column="1"
+                  ItemsSource="{Binding Categories}"
+                  DisplayMemberPath="Title"
+                  SelectedItem="{Binding SelectedGroup}"/>
+
+        <GroupBox Grid.Column="2"
+                  Header="{Binding SelectedGroup.Title,
+                                   FallbackValue='Категория не выбранна',
+                                   TargetNullValue='Категория не выбранна'}">
+            <DataGrid>
+
+            </DataGrid>
+        </GroupBox>
     </Grid>
 </Window>

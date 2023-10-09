@@ -16,3 +16,5 @@ E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\bin\Debug\ViewModel.pdb
 E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\obj\Debug\WpfView.csproj.CopyComplete
 E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\obj\Debug\Views\Windows\MainWindow.g.cs
 E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\obj\Debug\Views\Windows\MainWindow.baml
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\bin\Debug\Models.dll
+E:\UNIVER\KURS2\PROGRAMMING\KURSACH\WpfView\bin\Debug\Models.pdb
