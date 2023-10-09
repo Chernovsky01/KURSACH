@@ -37,14 +37,17 @@
                                    TargetNullValue='Категория не выбранна'}">
             <DataGrid ItemsSource="{Binding SelectedGroup.Cards}"
                       AutoGenerateColumns="False"
-                      IsReadOnly="True">
+                      IsReadOnly="True"
+                      GridLinesVisibility="Vertical"
+                      AlternatingRowBackground="LightGray">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Титул"
                                         Binding="{Binding Title}"/>
                     <DataGridTextColumn Header="Дедлайн"
                                         Binding="{Binding Deadline, StringFormat=dd.MM}"/>
                     <DataGridTextColumn Header="Описание"
-                                        Binding="{Binding TaskDescription}"/>
+                                        Binding="{Binding TaskDescription}"
+                                        Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>
