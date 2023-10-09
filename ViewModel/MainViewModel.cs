@@ -14,14 +14,14 @@ namespace ViewModels
 
         #region Example command
 
-        public ICommand ExampleCommand { get; }
+        //public ICommand ExampleCommand { get; }
 
-        private bool CanExampleCommand(object parametr) => true;
+        //private bool CanExampleCommand(object parametr) => true;
 
-        private void OnExampleCommand(object parametr)
-        {
+        //private void OnExampleCommand(object parametr)
+        //{
             
-        }
+        //}
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace ViewModels
         {
             #region Commands
 
-            ExampleCommand = new ActionCommand(OnExampleCommand, CanExampleCommand);
+            //ExampleCommand = new ActionCommand(OnExampleCommand, CanExampleCommand);
 
             #endregion
         }

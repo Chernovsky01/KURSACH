@@ -24,11 +24,7 @@
         </StackPanel>
 
         <ListView Grid.Column="1">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ListBox Height="100"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+            
         </ListView>
     </Grid>
 </Window>

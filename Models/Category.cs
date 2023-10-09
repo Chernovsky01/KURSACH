@@ -11,6 +11,6 @@ namespace Models
         /// <summary>
         /// Колекция, хранящая набор связанных с категорией карточек
         /// </summary>
-        public ObservableCollection<Card> Cards { get; set; }
+        public ICollection<Card> Cards { get; set; }
     }
 }
