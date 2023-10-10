@@ -60,6 +60,20 @@
                     <DataGridTextColumn Header="Описание"
                                         Binding="{Binding TaskDescription}"
                                         Width="*"/>
+                    
+                    <!--<DataGridTemplateColumn Header="Дата дедлайна">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate DataType="Card">
+                                <TextBlock Text="{Binding Deadline, StringFormat=dd.MM}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate DataType="Card">
+                                <DatePicker SelectedDate="{Binding Deadline}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>-->
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>

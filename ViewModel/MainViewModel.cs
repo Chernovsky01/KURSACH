@@ -20,12 +20,12 @@ namespace ViewModels
         #region Selected Group
 
         /// <summary>
-        /// Свойство выбранной группы
+        /// Свойство выбранной группы.
         /// </summary>
         private Category _selectedCategory;
 
         /// <summary>
-        /// Свойство выбранной группы
+        /// Свойство выбранной группы.
         /// </summary>
         public Category SelectedCategory
         {
@@ -82,33 +82,69 @@ namespace ViewModels
 
         #region Add Category Command
 
+        /// <summary>
+        /// Команда для добавления новой категории.
+        /// </summary>
         public ICommand AddCategoryCommand { get; }
 
+        /// <summary>
+        /// Метод, который определяет, можно ли добавить новую категорию.
+        /// </summary>
+        /// <param name="parametr"></param>
+        /// <returns></returns>
         private bool CanAddCategoryCommand(object parametr) => true;
 
+        /// <summary>
+        /// Метод, выполняющий команду добавления новой категории.
+        /// </summary>
+        /// <param name="parametr"></param>
         private void OnAddCategoryCommand(object parametr)
         {
-            // TODO - Сделать добавление категории через открытие нового окна
+            // TODO - Сделать добавление категории через открытие нового окна.
         }
 
         #endregion
 
         #region Remove Category Command
 
+        /// <summary>
+        /// Команда для удаления категории.
+        /// </summary>
         public ICommand RemoveCategoryCommand { get; }
 
+        /// <summary>
+        /// Метод, который определяет, можно ли удалить категорию.
+        /// </summary>
+        /// <param name="parametr"></param>
+        /// <returns></returns>
         private bool CanRemoveCategoryCommand(object parametr) => true;
 
+        /// <summary>
+        /// Метод, выполняющий команду удаления категории.
+        /// </summary>
+        /// <param name="parametr"></param>
         private void OnRemoveCategoryCommand(object parametr) => Categories.Remove(SelectedCategory);
 
         #endregion
 
         #region Complete Task Command
 
+        /// <summary>
+        /// Команда для завершения задачи.
+        /// </summary>
         public ICommand CompleteTaskCommand { get; }
 
+        /// <summary>
+        /// Метод, который определяет, можно ли завершить задачу.
+        /// </summary>
+        /// <param name="parametr"></param>
+        /// <returns></returns>
         private bool CanCompleteTaskCommand(object parametr) => true;
 
+        /// <summary>
+        /// Метод, выполняющий команду завершения задачи.
+        /// </summary>
+        /// <param name="parametr"></param>
         private void OnCompleteTaskCommand(object parametr) => SelectedCard.IsDone = true;
 
         #endregion

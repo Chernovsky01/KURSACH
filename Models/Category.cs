@@ -27,7 +27,7 @@ namespace Models
         #endregion
 
         /// <summary>
-        /// Колекция, хранящая набор связанных с категорией карточек
+        /// Колекция, хранящая набор связанных с категорией карточек.
         /// </summary>
         public ICollection<Card> Cards { get; set; }
     }
