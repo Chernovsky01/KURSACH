@@ -35,6 +35,24 @@ namespace ViewModels
 
         #endregion
 
+        #region Selected Card
+
+        /// <summary>
+        /// Свойство выбранной карты
+        /// </summary>
+        private Card _selectedCard;
+
+        /// <summary>
+        /// Свойство выбранной карты
+        /// </summary>
+        public Card SelectedCard
+        {
+            get => _selectedCard;
+            set => Set(ref _selectedCard, value);
+        }
+
+        #endregion
+
 
         public MainViewModel()
         {
@@ -57,6 +75,7 @@ namespace ViewModels
 
             AddCategoryCommand = new ActionCommand(OnAddCategoryCommand, CanAddCategoryCommand);
             RemoveCategoryCommand = new ActionCommand(OnRemoveCategoryCommand, CanRemoveCategoryCommand);
+            CompleteTaskCommand = new ActionCommand(OnCompleteTaskCommand, CanCompleteTaskCommand);
 
             #endregion
         }
@@ -81,6 +100,16 @@ namespace ViewModels
         private bool CanRemoveCategoryCommand(object parametr) => true;
 
         private void OnRemoveCategoryCommand(object parametr) => Categories.Remove(SelectedCategory);
+
+        #endregion
+
+        #region Complete Task Command
+
+        public ICommand CompleteTaskCommand { get; }
+
+        private bool CanCompleteTaskCommand(object parametr) => true;
+
+        private void OnCompleteTaskCommand(object parametr) => SelectedCard.IsDone = true;
 
         #endregion
     }

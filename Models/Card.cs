@@ -60,5 +60,23 @@ namespace Models
         }
 
         #endregion
+
+        #region Card Status IsDone
+
+        /// <summary>
+        /// Поле, которое показывает, выполнена ли задача.
+        /// </summary>
+        private bool _isDone;
+
+        /// <summary>
+        /// Поле, которое показывает, выполнена ли задача.
+        /// </summary>
+        public bool IsDone
+        {
+            get => _isDone;
+            set => Set(ref _isDone, value);
+        }
+
+        #endregion
     }
 }

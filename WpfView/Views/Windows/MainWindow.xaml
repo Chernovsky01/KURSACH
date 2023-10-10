@@ -19,13 +19,20 @@
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
-            <Button MinHeight="50"
-                    Content="Добавить катугорию"/>
-            <Button MinHeight="50"
+        <DockPanel Grid.Column="0">
+            <Button DockPanel.Dock="Top"
+                    Height="50"
+                    Content="Добавить категорию"/>
+            <Button DockPanel.Dock="Top"
+                    Height="50"
                     Content="Удалить категорию"
                     Command="{Binding RemoveCategoryCommand}"/>
-        </StackPanel>
+            <Button DockPanel.Dock="Bottom"
+                    VerticalAlignment="Bottom"
+                    Height="50"
+                    Content="Завершить задачу"
+                    Command="{Binding CompleteTaskCommand}"/>
+        </DockPanel>
 
         <ListView Grid.Column="1"
                   ItemsSource="{Binding Categories}"
@@ -37,15 +44,19 @@
                                    FallbackValue='Категория не выбранна',
                                    TargetNullValue='Категория не выбранна'}">
             <DataGrid ItemsSource="{Binding SelectedCategory.Cards}"
+                      SelectedItem="{Binding SelectedCard}"
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
                       GridLinesVisibility="Vertical"
-                      AlternatingRowBackground="LightGray">
+                      AlternatingRowBackground="LightGray"
+                      SelectionMode="Single">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Титул"
                                         Binding="{Binding Title}"/>
                     <DataGridTextColumn Header="Дедлайн"
                                         Binding="{Binding Deadline, StringFormat=dd.MM}"/>
+                    <DataGridCheckBoxColumn Header="V"
+                                            Binding="{Binding IsDone}"/>
                     <DataGridTextColumn Header="Описание"
                                         Binding="{Binding TaskDescription}"
                                         Width="*"/>
