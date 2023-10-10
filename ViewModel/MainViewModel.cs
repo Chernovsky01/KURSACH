@@ -16,36 +16,25 @@ namespace ViewModels
         /// </summary>
         public ObservableCollection<Category> Categories { get; set; }
 
+
         #region Selected Group
 
         /// <summary>
         /// Свойство выбранной группы
         /// </summary>
-        private Category _selectedGroup;
+        private Category _selectedCategory;
 
         /// <summary>
         /// Свойство выбранной группы
         /// </summary>
-        public Category SelectedGroup
+        public Category SelectedCategory
         {
-            get => _selectedGroup;
-            set => Set(ref _selectedGroup, value);
+            get => _selectedCategory;
+            set => Set(ref _selectedCategory, value);
         }
 
         #endregion
 
-        #region Example Command
-
-        //public ICommand ExampleCommand { get; }
-
-        //private bool CanExampleCommand(object parametr) => true;
-
-        //private void OnExampleCommand(object parametr)
-        //{
-
-        //}
-
-        #endregion
 
         public MainViewModel()
         {
@@ -66,9 +55,33 @@ namespace ViewModels
 
             #region Commands
 
-            //ExampleCommand = new ActionCommand(OnExampleCommand, CanExampleCommand);
+            AddCategoryCommand = new ActionCommand(OnAddCategoryCommand, CanAddCategoryCommand);
+            RemoveCategoryCommand = new ActionCommand(OnRemoveCategoryCommand, CanRemoveCategoryCommand);
 
             #endregion
         }
+
+        #region Add Category Command
+
+        public ICommand AddCategoryCommand { get; }
+
+        private bool CanAddCategoryCommand(object parametr) => true;
+
+        private void OnAddCategoryCommand(object parametr)
+        {
+            // TODO - Сделать добавление категории через открытие нового окна
+        }
+
+        #endregion
+
+        #region Remove Category Command
+
+        public ICommand RemoveCategoryCommand { get; }
+
+        private bool CanRemoveCategoryCommand(object parametr) => true;
+
+        private void OnRemoveCategoryCommand(object parametr) => Categories.Remove(SelectedCategory);
+
+        #endregion
     }
 }
