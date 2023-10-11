@@ -5,7 +5,6 @@ using System;
 using System.Windows.Input;
 using System.Xml;
 using ViewModel.Commands;
-using System.Text.RegularExpressions;
 
 namespace ViewModels
 {
@@ -149,4 +148,6 @@ namespace ViewModels
 
         #endregion
     }
+
+    // Environment.Exit(0); - Чтобы выйти из приложения.
 }
